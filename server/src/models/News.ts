@@ -13,7 +13,10 @@ const NewsSchema = new mongoose.Schema({
   country: String,
   publishedAt: Date,
   content: String,
-  author: String
+  author: String,
+  source: {
+    type: { name: String, id: String },
+  },
 });
 
 export const News = mongoose.model('News', NewsSchema);
